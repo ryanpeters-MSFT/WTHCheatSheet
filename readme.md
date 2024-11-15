@@ -6,3 +6,5 @@
 - [Challenge 6](./challenge6/) - Create a MongoDB database on the cluster and check the version
 - [Challenge 7](./challenge7/) - Deploy a `v2` version of the web and API apps that relies on the MongoDB database
 - [Challenge 8](./challenge8/) - Use Azure Files/Disks storage for the database persistent volume
+
+*This is an initial/partial draft and subject to change. The remaining challenges will be added eventually.*
