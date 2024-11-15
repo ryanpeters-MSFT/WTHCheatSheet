@@ -8,7 +8,7 @@ az group create -n rg-wth -l eastus2
 az aks create -n wthcluster -g rg-wth --zones 1 2 3
 ```
 
-**Verification**
+Verify the zones and network plugin.
 
 ```powershell
 # verify the zones for the nodes

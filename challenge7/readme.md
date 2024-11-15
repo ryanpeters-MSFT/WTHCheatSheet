@@ -8,7 +8,7 @@ This challenge requires creation of a job resource running the container `whatth
 kubectl apply -f .\init.yaml
 ```
 
-Verify that the database is running and now includes a new "contentdb" database in the list
+Verify that the database is running and now includes a new "contentdb" database in the list.
 
 ```powershell
 # shell into pod and verify database creation
