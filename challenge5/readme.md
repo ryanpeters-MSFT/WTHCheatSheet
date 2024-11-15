@@ -1,6 +1,6 @@
 # Challenge 05 - Scaling and High Availability
 
-Scale down the node pool to 1 node.
+Scale the node pool down to 1 node.
 
 ```powershell
 # get the name of the nodepool
