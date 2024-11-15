@@ -1,10 +1,9 @@
 # Challenge 07 - Updates and Rollbacks
 
-This challenge requires creation of a job resource running the container `whatthehackmsft/content-init` to populate the MongoDB database.
+This challenge requires creation of a job resource running the container `whatthehackmsft/content-init` to populate the MongoDB database. **Be sure to set the `MONGODB_CONNECTION` environment variable to be the mongo service (e.g., `mongodb://mongo:27017/contentdb`).**
 
 ```powershell
 # run the mongo init job to create the "contentdb" database
-# NOTE: be sure to set the MONGODB_CONNECTION env var to be the mongo service
 kubectl apply -f .\init.yaml
 ```
 
