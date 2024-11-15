@@ -19,7 +19,7 @@ curl http://localhost:3001/speakers
 kubectl apply -f .\api-service.yaml
 ```
 
-**Make sure users set the `CONTENT_API_URL` environment variable in their web deployment to the name of the API service name.**
+**Make sure users set the `CONTENT_API_URL` environment variable in their web deployment using the name of the API service (e.g., `http://api:3001`).**
 
 ```powershell
 # deploy the web app and service
