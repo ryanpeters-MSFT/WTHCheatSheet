@@ -10,6 +10,13 @@ az aks nodepool list --cluster-name wthcluster -g rg-wth -o table
 az aks nodepool scale --cluster-name wthcluster -g rg-wth -n nodepool1 -c 1
 ```
 
+Once scaled down, users can verify that only 1 node remains.
+
+```powershell
+# show the nodes
+kubectl get nodes
+```
+
 Scale-up the web and API apps.
 ```powershell
 # OPTION 1: increase spec.replicas in the deployment and re-apply
