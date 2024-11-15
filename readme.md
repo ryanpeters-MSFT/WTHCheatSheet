@@ -1,4 +1,4 @@
-# AKS What-The-Hack Cheat-Sheet
+# What The Hack - Intro To Kuberntes Cheat-Sheet
 
 - [Challenge 3](./challenge3/) - Create a basic cluster
 - [Challenge 4](./challenge4/) - Create a basic deployment and service for a web and API application
