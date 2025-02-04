@@ -14,10 +14,13 @@ Verify the zones and network plugin.
 # verify the zones for the nodes
 az aks show -n wthcluster -g rg-wth --query "agentPoolProfiles[].availabilityZones"
 
-# verify kubenet is the network plugin
+# verify CNI is the network plugin
 az aks show -n wthcluster -g rg-wth --query "networkProfile.networkPlugin"
+
+# verify that the plugin mode is "overlay"
+az aks show -n wthcluster -g rg-wth --query "networkProfile.networkPluginMode"
 ```
 
 ## Tips
 - **"The cluster should use a managed identity"** - This is already happening, as a cluster uses a system-assigned managed identity by default for the control plane. There are no additional options to enable this.
-- **"The cluster should use kubenet (ie: basic networking)."** - This is also already happening, as the default networking is kubenet. No additional flags are needed.
+- **"The cluster should use Azure CNI (with overlay enabled)."** - This is also already happening, as the default networking is CNI w/ overlay. No additional flags are needed.
