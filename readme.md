@@ -1,5 +1,6 @@
 # What The Hack - Intro To Kuberntes Cheat-Sheet
 
+- [Challenge 2](./challenge2/) - Create the ACR and build images
 - [Challenge 3](./challenge3/) - Create a basic cluster
 - [Challenge 4](./challenge4/) - Create a basic deployment and service for a web and API application
 - [Challenge 5](./challenge5/) - Scale the cluster down and adjust pod replicas
