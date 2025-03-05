@@ -39,8 +39,11 @@ az acr update -n wthacr02192015 --admin-enabled true
 # get the credentials
 az acr credential show -n wthacr02192015 -o table
 
-# add ACR as a repository for helm
+# add ACR as a repository for helm (legacy)
 az acr helm repo add -n wthacr02192015
+
+# add ACR as a repository for helm (Helm 3 commands)
+helm repo add wth https://wthacr02192015.azurecr.io/helm/v1/repo --username wthacr02192015 --password YOUR_ACR_PASSWORD
 
 # package the current chart folder
 helm package .
@@ -48,11 +51,11 @@ helm package .
 # log into the ACR with your password
 helm registry login wthacr02192015.azurecr.io -u wthacr02192015 -p YOUR_ACR_PASSWORD
 
-# add the helm repository (Helm 3 commands)
-helm repo add wth https://wthacr02192015.azurecr.io/helm/v1/repo --username wthacr02192015 --password YOUR_ACR_PASSWORD
-
 # upload the chart to the repository
 helm push langfacts-1.0.0.tgz oci://wthacr02192015.azurecr.io/langfacts
+
+# install using OCI
+helm install langfacts oci://wthacr02192015.azurecr.io/langfacts/langfacts -n whatthehack --create-namespace
 
 # NOTE: it appear this method no longer works unless the ACR Premium SKU is used
 az acr helm push -n wthacr02192015 langfacts-1.0.0.tgz
