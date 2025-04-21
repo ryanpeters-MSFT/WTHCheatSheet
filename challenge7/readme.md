@@ -12,7 +12,11 @@ Verify that the database is running and now includes a new "contentdb" database 
 ```powershell
 # shell into pod and verify database creation
 kubectl exec -it PODNAME -- bash
+
+# from within pod shell
 mongosh
+
+# from within mongosh process
 show dbs;
 ```
 
