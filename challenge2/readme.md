@@ -15,7 +15,7 @@ Verify the ACR was created.
 az acr list -o table
 ```
 
-Copy the Dockerfile files into their respective source code folders and build the images.
+Copy the Dockerfile files from **Challenge-02** into their respective source code folders in **Challenge-01** and build the images.
 
 ```powershell
 # build content-api (in content-api folder)
