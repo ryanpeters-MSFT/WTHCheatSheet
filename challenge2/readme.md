@@ -5,7 +5,7 @@
 az group create -n rg-wth -l eastus2
 
 # create the ACR
-az acr create -n wthacr02192015 -g rg-wth --sku Standard
+az acr create -n wthacr012345abcde -g rg-wth --sku Standard
 ```
 
 Verify the ACR was created.
@@ -19,10 +19,10 @@ Copy the Dockerfile files from **Challenge-02** into their respective source cod
 
 ```powershell
 # build content-api (in content-api folder)
-az acr build -r wthacr02192015 -t content-api:latest -f .\Dockerfile .
+az acr build -r wthacr12345abcde -t content-api:latest -f .\Dockerfile .
 
 # build content-web (in content-web folder)
-az acr build -r wthacr02192015 -t content-web:latest -f .\Dockerfile .
+az acr build -r wthacr12345abcde -t content-web:latest -f .\Dockerfile .
 ```
 
 ## Tips

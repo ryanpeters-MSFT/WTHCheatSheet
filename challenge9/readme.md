@@ -34,29 +34,29 @@ This step packages the chart/template files into a zipped file and uploads it to
 
 ```powershell
 # set the ACR to have admin enabled
-az acr update -n wthacr02192015 --admin-enabled true
+az acr update -n wthacr12345abcde --admin-enabled true
 
 # get the credentials
-az acr credential show -n wthacr02192015 -o table
+az acr credential show -n wthacr12345abcde -o table
 
 # add ACR as a repository for helm (legacy)
-az acr helm repo add -n wthacr02192015
+az acr helm repo add -n wthacr12345abcde
 
 # add ACR as a repository for helm (Helm 3 commands)
-helm repo add wth https://wthacr02192015.azurecr.io/helm/v1/repo --username wthacr02192015 --password YOUR_ACR_PASSWORD
+helm repo add wth https://wthacr12345abcde.azurecr.io/helm/v1/repo --username wthacr12345abcde --password YOUR_ACR_PASSWORD
 
 # package the current chart folder
 helm package .
 
 # log into the ACR with your password
-helm registry login wthacr02192015.azurecr.io -u wthacr02192015 -p YOUR_ACR_PASSWORD
+helm registry login wthacr12345abcde.azurecr.io -u wthacr12345abcde -p YOUR_ACR_PASSWORD
 
 # upload the chart to the repository
-helm push langfacts-1.0.0.tgz oci://wthacr02192015.azurecr.io/langfacts
+helm push langfacts-1.0.0.tgz oci://wthacr12345abcde.azurecr.io/langfacts
 
 # install using OCI
-helm install langfacts oci://wthacr02192015.azurecr.io/langfacts/langfacts -n whatthehack --create-namespace
+helm install langfacts oci://wthacr12345abcde.azurecr.io/langfacts/langfacts -n whatthehack --create-namespace
 
 # NOTE: it appear this method no longer works unless the ACR Premium SKU is used
-az acr helm push -n wthacr02192015 langfacts-1.0.0.tgz
+az acr helm push -n wthacr12345abcde langfacts-1.0.0.tgz
 ```
