@@ -45,11 +45,11 @@ az acr helm repo add -n wthacr012345abcde
 # add ACR as a repository for helm (Helm 3 commands)
 helm repo add wth https://wthacr012345abcde.azurecr.io/helm/v1/repo --username wthacr012345abcde --password YOUR_ACR_PASSWORD
 
-# package the current chart folder
-helm package .
-
 # log into the ACR with your password
 helm registry login wthacr012345abcde.azurecr.io -u wthacr012345abcde -p YOUR_ACR_PASSWORD
+
+# package the current chart folder
+helm package .
 
 # upload the chart to the repository
 helm push langfacts-1.0.0.tgz oci://wthacr012345abcde.azurecr.io/langfacts
