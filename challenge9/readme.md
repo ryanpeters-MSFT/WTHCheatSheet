@@ -57,6 +57,6 @@ helm push langfacts-1.0.0.tgz oci://wthacr012345abcde.azurecr.io/langfacts
 # install using OCI
 helm install langfacts oci://wthacr012345abcde.azurecr.io/langfacts/langfacts -n whatthehack --create-namespace
 
-# NOTE: it appear this method no longer works unless the ACR Premium SKU is used
+# NOTE: it appears this method no longer works unless the ACR Premium SKU is used
 az acr helm push -n wthacr012345abcde langfacts-1.0.0.tgz
 ```
