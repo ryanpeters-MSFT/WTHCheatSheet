@@ -8,10 +8,10 @@ az group create -n rg-wth -l eastus2
 az aks create -n wthcluster -g rg-wth --zones 1 2 3
 
 # create the cluster (OPTION 2: using ACR registry)
-az aks create -n wthcluster -g rg-wth --zones 1 2 3 --attach-acr wthacr12345abcde
+az aks create -n wthcluster -g rg-wth --zones 1 2 3 --attach-acr wthacr012345abcde
 
 # update the cluster for ACR (if they forgot to attach it)
-az aks update -n wthcluster -g rg-wth --attach-acr wthacr12345abcde
+az aks update -n wthcluster -g rg-wth --attach-acr wthacr012345abcde
 ```
 
 Verify the zones and network plugin.

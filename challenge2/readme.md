@@ -19,10 +19,10 @@ Copy the Dockerfile files from **Challenge-02** into their respective source cod
 
 ```powershell
 # build content-api (in content-api folder)
-az acr build -r wthacr12345abcde -t content-api:latest -f .\Dockerfile .
+az acr build -r wthacr012345abcde -t content-api:latest -f .\Dockerfile .
 
 # build content-web (in content-web folder)
-az acr build -r wthacr12345abcde -t content-web:latest -f .\Dockerfile .
+az acr build -r wthacr012345abcde -t content-web:latest -f .\Dockerfile .
 ```
 
 ## Tips
