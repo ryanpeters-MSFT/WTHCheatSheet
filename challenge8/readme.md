@@ -21,3 +21,7 @@ Finally, run the new deployment with `volumeMounts` and `volumes` configured.
 # deploy the updated MongoDB deployment
 kubectl apply -f .\mongo-deployment.yaml
 ```
+
+## Optional: Using Multiple StorageClasses
+
+One option is to use multiple storage classes. For example, change the `storageClassName` in the "config" PVC to be `azurefile-csi`. This will create a storage account and a file share resource.
