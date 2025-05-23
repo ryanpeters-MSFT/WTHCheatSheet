@@ -6,7 +6,7 @@ spec:
   #ingressClassName: webapprouting.kubernetes.azure.com # if using app routing add-on
   ingressClassName: nginx # if using helm install
   rules:
-  - host: mycustomfqdn.eastus2.cloudapp.azure.com
+  - host: mycustomfqdn.eastus2.cloudapp.azure.com # or use nip.io
     http:
       paths:
       - backend:

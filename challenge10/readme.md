@@ -4,6 +4,8 @@
 
 This simply adds a FQDN to the public Azure DNS. The following should be added to the web service resource they created in challenge 4. Here is an [example](./web-service-part1.yaml).
 
+This creates a FQDN at the address [http://mycustomfqdn.eastus2.cloudapp.azure.com/](http://mycustomfqdn.eastus2.cloudapp.azure.com/).
+
 ```yaml
 metadata:
   annotations:
